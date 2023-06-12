@@ -1,0 +1,30 @@
+
+<div>
+    <label class="text-base" for="">Categoria</label>
+    <select (change)="onChangeCategory($event)"
+    class="py-3 px-4 pr-9 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 sm:p-5"
+  >
+    <option selected>Open this select menu</option>
+    <option *ngFor="let c of categories" [value]="c">{{c}}</option>
+    
+  </select>
+</div>
+
+<div>
+    <label class="text-base" for="">Precio</label>
+    <select (change)="onChangePrice($event)"
+    class="py-3 px-4 pr-9 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 sm:p-5"
+  >
+    <option selected>Open this select menu</option>
+    <option *ngFor="let p of prices" [value]="p">{{p}}</option>
+  </select>
+</div>
+<div>
+    <label class="text-base" for="">Marca</label>
+    <select (change)="onChangeBrand($event)" 
+    class="py-3 px-4 pr-9 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 sm:p-5"
+  >
+    <option selected>Open this select menu</option>
+    <option *ngFor="let b of brand" value="{{b}}">{{b}}</option>
+  </select>
+</div>

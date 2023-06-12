@@ -1,0 +1,13 @@
+<p>cart works!</p>
+<div *ngFor="let i of (cart$ | async)?.items">
+    <h1>{{i.price}}</h1>
+    <h1>{{i.name}}</h1>
+    <h1>{{i.quantity}}</h1>
+    <button (click)="onQuantityMinus()">quantity minus</button>
+    <button (click)="onQuantityPlus()">quantity plus</button>
+    <button (click)="removeItem(i.id)">remove</button>
+</div>
+
+<button (click)="pushItem()">push</button>
+
+
